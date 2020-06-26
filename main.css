@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600");
+body, html {
+  height: 100%;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  font-family: 'Montserrat';
+  background-color: #9b948e;
+  color: #826158;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: url("images/tumblr_header.jpg"), #f0bbb9;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 50px;
+}
+
+header h1 {
+  font-size: larger;
+  margin: 0 auto;
+  border: 4px solid white;
+  padding: 1ex;
+  text-align: center;
+  display: block;
+  width: 20ex;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+nav {
+  text-align: center;
+  font-size: small;
+  padding: 1ex;
+  color: #826158;
+  background: white;
+  text-decoration: none;
+}
+
+nav .arrow {
+  width: 10px;
+  -webkit-filter: invert(36%) sepia(4%) saturate(3750%) hue-rotate(325deg) brightness(103%) contrast(75%);
+          filter: invert(36%) sepia(4%) saturate(3750%) hue-rotate(325deg) brightness(103%) contrast(75%);
+}
+
+nav ul {
+  padding-left: 0;
+  margin: 1em, 30em;
+}
+
+nav ul a:hover {
+  background-color: pink;
+  color: black;
+}
+
+nav a {
+  color: #826158;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1px;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.container {
+  color: black;
+  font-size: small;
+  text-align: center;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.container img {
+  width: 30%;
+  padding: 1em;
+  border-radius: 3em;
+}
+
+footer {
+  font-size: xx-small;
+}
+
+footer .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer .notice {
+  font-size: small;
+  color: darkgreen;
+}
+
+@media only screen and (min-width: 500px) {
+  .hide-desktop {
+    display: none;
+  }
+  .container {
+    margin: 1em 6em;
+  }
+  .container .first-sec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .show-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header h1 {
+    font-size: 110%;
+  }
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  body {
+    font-size: larger;
+  }
+}
+/*# sourceMappingURL=main.css.map */
