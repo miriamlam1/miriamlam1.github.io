@@ -40,7 +40,7 @@ header {
     color:color(accent);
     padding: 50px;
     h1 { 
-        font-size: 28px;
+        font-size: 20px;
         margin: 0 auto;
         border: 0.3ex solid color(accent);
         padding: 1ex;
@@ -84,6 +84,11 @@ nav {
     a {
         color: color(dark);
     }
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .sticky {
@@ -135,7 +140,7 @@ footer {
     }
 }
 
-@media only screen and (min-width: 700px)  {
+@media only screen and (min-width: 675px)  {
 
     .hide-desktop{
         display: none;
@@ -173,16 +178,16 @@ footer {
 
 }
 
-@media only screen and (min-width: 1000px)  {
-    .container{
-        margin: 1em 20em;
-    }
-    header {
-        h1 {
-            font-size: 72px;
-        }
-        h3{
-            font-size: 30px;
-        }
-    }
-}
+// @media only screen and (min-width: 1000px)  {
+//     .container{
+//         margin: 1em 20em;
+//     }
+//     header {
+//         h1 {
+//             font-size: 72px;
+//         }
+//         h3{
+//             font-size: 30px;
+//         }
+//     }
+// }

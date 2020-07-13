@@ -30,7 +30,7 @@ header {
 }
 
 header h1 {
-  font-size: 28px;
+  font-size: 20px;
   margin: 0 auto;
   border: 0.3ex solid white;
   padding: 1ex;
@@ -78,6 +78,14 @@ nav ul a:hover {
 
 nav a {
   color: #826158;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .sticky {
@@ -137,7 +145,7 @@ footer a {
   color: #331b10;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 675px) {
   .hide-desktop {
     display: none;
   }
@@ -173,18 +181,6 @@ footer a {
   }
   body {
     font-size: larger;
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  .container {
-    margin: 1em 20em;
-  }
-  header h1 {
-    font-size: 72px;
-  }
-  header h3 {
-    font-size: 30px;
   }
 }
 /*# sourceMappingURL=main.css.map */

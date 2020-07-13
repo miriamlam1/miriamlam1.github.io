@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="images/tumblr_header.jpg">
     <meta name="description" content="miriam, lam, miriam lam, computer engineer, software engineer, web dev, game dev">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <!-- header -->
@@ -63,6 +64,8 @@
         <p class="notice">This site is a work in progress.</p>
         <hr>
         <p>All fonts from <a href="fonts.google.com">Google</a></p>
+        <p>HTML, CSS, and JS by me</p>
+        <p>hosted on github pages</p>
         <p class="copyright">&copy;Miriam Lam 2020 | miriamslam@gmail.com</p>
     </footer>
 
@@ -91,6 +94,12 @@
         chevron.addEventListener('click', function(e) {
             nav.classList.toggle('hide-mobile');
             e.preventDefault();
+        });
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $("h1").fadeIn();
         });
     </script>
 
