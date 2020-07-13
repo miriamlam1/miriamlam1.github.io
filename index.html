@@ -4,55 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miriam's Site</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="images/tumblr_header.jpg">
+    <meta name="description" content="miriam, lam, miriam lam, computer engineer, software engineer, web dev, game dev">
 </head>
 <body>
     <!-- header -->
     <header>
         <h1><a href="index.html">Miriam Lam</a></h1>
+        <h3>software engineering | game dev | embedded systems</h3>
     </header>
 
     <!-- nav -->
     <nav id="navbar">
-        <a href="#" class="hide-desktop" id="menu">navigate <img src="down-arrow.svg" alt="chevron" class="arrow"></a>
+        <a href="#" class="hide-desktop" id="menu">navigate <img src="../images/down-arrow.svg" alt="chevron" class="arrow"></a>
         <ul class="show-desktop hide-mobile" id="nav">
             <li id="toggle-menu" class="exit-btn hide-desktop">
             <li><a href="index.html">home</a></li>
-            <li><a href="about-me.html">about me</a></li>
+            <li><a href="about.html">about</a></li>
             <li><a href="#projects.html">projects</a></li>
+            <li><a href="#contact.html">contact</a></li>
             <li><a href="#art">art portfolio</a></li>
         </ul>
     </nav>
 
     <div class="content">
-    <div class="container">
-        <div class="first-sec">
-            <div>
-            <h2>Welcome, I'm Miriam!</h2>
-            <p>I am a rising senior Computer Engineering student at Cal Poly living in Davis, CA</p>
+        <div class="container">
+            <div class="first-sec">
+                <div>
+                <h2>Welcome, I'm Miriam!</h2>
+                <p>I am a rising senior Computer Engineering student 
+                    at Cal Poly living in Davis, CA</p>
+                </div>
+                <img src="images/red_wave.jpg" alt="myface">
             </div>
-            <img src="images/red_wave.jpg" alt="myface">
+        </div>
+        <div class = "container">
+            <div class="second-sec">
+                <h2>Languages</h2>
+                <li>Python</li>
+                <li>C/C++</li>
+                <li>Java</li>
+            </div>
         </div>
     </div>
 
-    <div class="container">
-        <h2>Why Computer Engineering?</h2>
-        <p>I like computer engineering because it takes the good parts of computer science and the good parts of Electrical Engineering and combines them. Too deep into either side becomes too mathy and convoluted for me (boo data sciences), which makes computer engineering perfect for me. 
-        </p>
-    </div>
-
-    <div class="container">
-        <h2>Hobbies</h2>
-        <p>In my free time, I enjoy art and design. I like digital painting, 3d modeling, game development, and anything of that vein. Of course, I spend copious hours playing my favorite video games, League of Legends and Overwatch with my friends.</p>
-    </div>
-
-    <div class="container">
-        <h2>Skills</h2>
-        <p>I know Python, C, Java, and Assembly very well. I code on Windows and SSH to a linux server. I use git bash to run my code on VSCode which has great extensions.
-            I have hands-on experience with embedded systems, which is what I am best at. I know about circuit basics and how to design digital and analog circuits and the tools to test them as well as simulate them.
-        </p>
-    </div>
     </div>
 
     <!-- footer -->
@@ -64,7 +60,9 @@
             <li><a href="https://github.com/miriamlam1" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
             <!-- <li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li> -->
         </ul>
-        <p class="notice">THIS SITE IS VERY MUCH A WORK IN PROGRESS. I AM LEARNING HTML, CSS, AND JAVASCRIPT</p>
+        <p class="notice">This site is a work in progress.</p>
+        <hr>
+        <p>All fonts from <a href="fonts.google.com">Google</a></p>
         <p class="copyright">&copy;Miriam Lam 2020 | miriamslam@gmail.com</p>
     </footer>
 
@@ -85,6 +83,7 @@
           }
         }
     </script>
+    
     <script>
         var chevron = document.getElementById('menu');
         var nav = document.getElementById('nav');
@@ -93,7 +92,6 @@
             nav.classList.toggle('hide-mobile');
             e.preventDefault();
         });
-
     </script>
 
 </body>

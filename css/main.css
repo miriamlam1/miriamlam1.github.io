@@ -1,141 +1,190 @@
-/* hey */
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Script&display=swap");
+body, html {
+  height: 100%;
+}
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400');
+ul, ol {
+  list-style-type: none;
+}
 
-html, body {
-    width: 100%; height: 95vh; overflow: hidden;
+a {
+  text-decoration: none;
+  color: white;
 }
 
 body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: rgb(73, 16, 16);
-    color: white;
-}
-
-h1 {
-    padding: 2ex;
-    color: white;
-    width: 20ex;
-
-    border: 4px solid white;
-    padding: 1ex;
-    margin: 1ex;
-    text-align:center; 
-    display:inline-block;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-header nav {
-    position: fixed;
-    right: 0;
-    top: 0;
-    padding: 1ex 1ex;
+  font-family: 'Montserrat';
+  background-color: #9b948e;
+  color: #826158;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    padding: 1ex;
-    text-align: center;
-    background-image: url("https://66.media.tumblr.com/d8be1804c81c5084853b2354afc6b36c/tumblr_p5ecx17r181v4pf8xo1_540.gifv");
-    background-size: cover;
+  background: url("../images/tumblr_header.jpg"), #f0bbb9;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 50px;
 }
 
-.menu {
-    width: 25px;
-    margin-top: 45%;
+header h1 {
+  font-size: 28px;
+  margin: 0 auto;
+  border: 0.3ex solid white;
+  padding: 1ex;
+  text-align: center;
+  display: block;
+  width: 20ex;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header h3 {
+  font-size: medium;
+  font-family: League Script;
+  text-align: center;
 }
 
 .hide-mobile {
-    display: none;
+  display: none;
 }
 
-.container{
-    text-align: center;
-    padding: 2ex;
+nav {
+  text-align: center;
+  font-size: medium;
+  padding: 0.5ex;
+  color: #826158;
+  background: white;
+  text-decoration: none;
 }
 
-.face {
-    border: 2ex solid whitesmoke;
-    margin: 1ex;
-    width: 25%;
+nav .arrow {
+  width: 10px;
+  -webkit-filter: invert(36%) sepia(4%) saturate(3750%) hue-rotate(325deg) brightness(103%) contrast(75%);
+          filter: invert(36%) sepia(4%) saturate(3750%) hue-rotate(325deg) brightness(103%) contrast(75%);
 }
 
 nav ul {
-    position: fixed;
-    width: 60%;
-    top: 0;
-    right: 0;
-    text-align: left;
-    background: url(https://www.itl.cat/pngfile/big/127-1279273_metalocalypse-great-wave-off-kanagawa-red.jpg);
-    background-position: 20%;
-    filter: grayscale(50%);
-    opacity: .99;
-    height: 100%;
-    z-index: 7;
-    padding-top: 3em;
+  padding-left: 0;
+  margin: 1em, 30em;
 }
 
-nav ul li a {
-    color: black;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    padding: 1em 2em;
+nav ul a:hover {
+  background-color: pink;
+  color: #331b10;
 }
 
-nav ul li a:hover {
-    background-color: rgb(37, 90, 139);
-    color: white;
-    opacity: 50%;
+nav a {
+  color: #826158;
 }
 
-.exit-btn {
-    margin-bottom: 1em;
-    margin-top: -1.3em;
-    text-align: right;
-    padding: 0 1.4em;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1px;
 }
 
-.exit-btn img {
-    width: 15px;
-    cursor: pointer;
+.sticky + .content {
+  padding-top: 60px;
 }
 
-@media only screen and (min-width: 800px)  {
-
-    .hide-desktop{
-        display: none;
-    }
-
-    .show-desktop {
-        display: block;
-        position: relative;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    header nav {
-        position: relative;
-    }
-
-    nav ul {
-        background: none;
-    }
-
-    nav ul li a {
-        color:white;
-        background-color: inherit;
-        padding: 1em 2em;
-    }
-
-    nav ul li a:hover {
-        background-color: inherit;
-    }
-
+.container {
+  color: #331b10;
+  font-size: small;
+  text-align: center;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: white;
 }
+
+.container img {
+  width: 30%;
+  padding: 1em;
+  border-radius: 3em;
+}
+
+hr {
+  background: pink;
+  border-width: 1px;
+  width: 20%;
+  text-align: left;
+  margin-left: 0;
+}
+
+footer {
+  padding: 1em;
+  font-size: xx-small;
+}
+
+footer .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer .notice {
+  font-size: small;
+}
+
+footer a {
+  color: #331b10;
+}
+
+@media only screen and (min-width: 700px) {
+  .hide-desktop {
+    display: none;
+  }
+  .container {
+    margin: 1em 6em;
+  }
+  .container .first-sec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .show-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header h1 {
+    font-size: 50px;
+  }
+  header h3 {
+    font-size: 20px;
+  }
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  body {
+    font-size: larger;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    margin: 1em 20em;
+  }
+  header h1 {
+    font-size: 72px;
+  }
+  header h3 {
+    font-size: 30px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
