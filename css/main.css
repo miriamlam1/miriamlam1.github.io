@@ -10,7 +10,7 @@ ul, ol {
 
 a {
   text-decoration: none;
-  color: white;
+  color: #f5f3eb;
 }
 
 body {
@@ -25,14 +25,14 @@ header {
   background: url("../images/tumblr_header.jpg"), #f0bbb9;
   background-size: cover;
   background-position: center;
-  color: white;
+  color: #f5f3eb;
   padding: 50px;
 }
 
 header h1 {
   font-size: 20px;
   margin: 0 auto;
-  border: 0.3ex solid white;
+  border: 0.3ex solid #f5f3eb;
   padding: 1ex;
   text-align: center;
   display: block;
@@ -87,7 +87,7 @@ nav {
   font-size: medium;
   padding: 0.7em;
   color: #826158;
-  background: white;
+  background: #f5f3eb;
   text-decoration: none;
 }
 
@@ -139,7 +139,7 @@ nav a {
   margin: 1em;
   padding: 1em;
   border-radius: 5px;
-  background-color: white;
+  background-color: #f5f3eb;
 }
 
 .container img {
