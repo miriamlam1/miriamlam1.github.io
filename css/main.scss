@@ -49,16 +49,32 @@ header {
         width: 20ex;
         text-transform: uppercase;
         text-decoration: none;
+        animation: fadeInAnim ease 1.1s;
     }
     h3 {
         font-size: medium;
         font-family: League Script;
         text-align: center;
+        animation: fadeInAnim ease 2s;
+    }
+}
+
+@keyframes fadeInAnim{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
 
 .hide-mobile {
     display: none;
+}
+
+.flip {
+    transform: rotate(-180deg);
+    transition: transform .5s;
 }
 
 nav {
@@ -69,7 +85,7 @@ nav {
         //https://codepen.io/sosuke/pen/Pjoqqp
         filter: invert(36%) sepia(4%) saturate(3750%) hue-rotate(325deg) brightness(103%) contrast(75%);
     }
-    padding: 0.5ex;
+    padding: 0.7em;
     color: color(dark);
     background: color(accent);
     text-decoration: none;
@@ -77,9 +93,9 @@ nav {
         padding-left: 0;
         margin: 1em, 30em;
         a:hover {
-    background-color: pink;
-    color: color(darker);
-}
+            background-color: pink;
+            color: color(darker);
+        }
     }
     a {
         color: color(dark);
@@ -88,6 +104,7 @@ nav {
 
 .content{
     display: flex;
+    padding: 1em;
     flex-wrap: wrap;
 }
 
@@ -103,6 +120,7 @@ nav {
 }
 
 .container{
+    margin: 100px;
     color: color(darker);
     font-size: small;
     text-align: center;
@@ -115,10 +133,15 @@ nav {
     padding: 1em;
     border-radius: 5px;
     background-color: color(accent);
+    ul{display: block;
+    text-align: left;}
+    li{
+        a{color: black;}}
 }
 
 hr {
-    background: pink;
+    display: none;
+    background: none;
     border-width: 1px;
     width:20%;
     text-align:left;
@@ -126,21 +149,32 @@ hr {
 }
 
 footer {
-    padding: 1em;
-    font-size: xx-small;
+    box-shadow: 0 50vh 0 50vh color(darker);
+    background-color: color(darker);
+    padding: 2em;
+    font-size: 9px;
+    
     .icons{
+        padding: 0;
         display:flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
+
+        filter: invert(93%) sepia(7%) saturate(358%) hue-rotate(30deg) brightness(98%) contrast(89%);
+        img{
+            width: 20px;
+        }
+        margin: 0 auto;
+        max-width: 340px;
     }
     .notice{
-        font-size: small;
+        font-size: 12px;
     }
     a{
-        color:color(darker);
+        color:color(primary);
     }
 }
 
-@media only screen and (min-width: 675px)  {
+@media only screen and (min-width: 590px)  {
 
     .hide-desktop{
         display: none;
@@ -156,6 +190,9 @@ footer {
 
     .show-desktop{
         display: flex;
+        margin: 0 auto;
+        padding: 1em;
+        max-width: 900px;
     }
 
     header {
@@ -178,16 +215,23 @@ footer {
 
 }
 
-// @media only screen and (min-width: 1000px)  {
-//     .container{
-//         margin: 1em 20em;
-//     }
-//     header {
-//         h1 {
-//             font-size: 72px;
-//         }
-//         h3{
-//             font-size: 30px;
-//         }
-//     }
-// }
+@media only screen and (min-width: 1000px)  {
+    .container{
+        margin: 1em 20em;
+    }
+    header {
+        h1 {
+            font-size: 72px;
+        }
+        h3{
+            font-size: 30px;
+        }
+    }
+    nav {
+        font-size: 20px;
+    }
+
+    .icons img{
+        width:55px;
+    } 
+}
