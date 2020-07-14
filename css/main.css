@@ -83,6 +83,8 @@ header h3 {
 }
 
 nav {
+  text-transform: uppercase;
+  font-weight: bold;
   text-align: center;
   font-size: medium;
   padding: 0.7em;
