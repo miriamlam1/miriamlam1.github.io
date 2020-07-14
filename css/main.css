@@ -26,11 +26,11 @@ header {
   background-size: cover;
   background-position: center;
   color: #f5f3eb;
-  padding: 50px;
+  padding: 27px;
 }
 
 header h1 {
-  font-size: 20px;
+  font-size: 24px;
   margin: 0 auto;
   border: 0.3ex solid #f5f3eb;
   padding: 1ex;
@@ -44,6 +44,7 @@ header h1 {
 }
 
 header h3 {
+  max-width: 700px;
   font-size: medium;
   font-family: League Script;
   text-align: center;
@@ -84,7 +85,7 @@ header h3 {
 
 nav {
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: bolder;
   text-align: center;
   font-size: medium;
   padding: 0.7em;
@@ -159,6 +160,10 @@ nav a {
   color: black;
 }
 
+.container img {
+  min-width: 220px;
+}
+
 hr {
   display: none;
   background: none;
@@ -201,6 +206,15 @@ footer a {
   color: #9b948e;
 }
 
+@media only screen and (min-width: 370px) {
+  header {
+    padding: 20px;
+  }
+  header h1 {
+    font-size: 29px;
+  }
+}
+
 @media only screen and (min-width: 590px) {
   .hide-desktop {
     display: none;
@@ -223,6 +237,9 @@ footer a {
     margin: 0 auto;
     padding: 1em;
     max-width: 900px;
+  }
+  header {
+    padding: 50px;
   }
   header h1 {
     font-size: 50px;
