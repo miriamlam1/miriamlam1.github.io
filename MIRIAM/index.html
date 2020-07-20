@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miriam's Site</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/tumblr_header.jpg">
+    <meta name="description" content="Miriam Lam: computer engineer, software engineer, web dev, game dev">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <h1><a href="index.html">Miriam Lam</a></h1>
+        <h3>software engineering | game dev | embedded systems</h3>
+    </header>
+
+    <!-- nav -->
+    <nav id="navbar">
+        <a href="#" class="hide-desktop" id="menu">navigate <img src="../images/down-arrow.svg" alt="chevron" id = "arrow" class="arrow"></a>
+        <ul class="show-desktop hide-mobile" id="nav">
+            <li id="toggle-menu" class="exit-btn button hide-desktop">
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="art.html">art portfolio</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="container">
+            <div class="first-sec">
+                <div>
+                <h3>Welcome, I'm Miriam!</h3>
+                <p>I am a rising senior Computer Engineering student 
+                    at Cal Poly living in Davis, CA</p>
+                </div>
+                <img src="images/red_wave.jpg" alt="myface">
+            </div>
+        </div>
+        <!-- <div class = "container">
+            <div class="second-sec">
+                <h2>Languages</h2>
+                <ul>
+                <li>Python</li>
+                <li>C/C++</li>
+                <li>Java</li>
+                </ul>
+            </div>
+        </div> -->
+    </div>
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <ul class="icons">
+            <!-- <li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li> -->
+            <li>
+                <a href="https://www.linkedin.com/in/miriamlam1/" class="icon linkedin">
+                    <img src="images/linkedin.svg" alt="github">
+                </a>
+            </li>
+            <!-- <li><img src="images/instagram.svg" alt="instagram"><a href="https://www.instagram.com/waterfaucet/" class="icon instagram"> -->
+            <li>
+                <a href="mailto:mlam27@calpoly.edu" class="icon mail">
+                    <img src="images/mail.svg" alt="mail">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/miriamlam1" class="icon github">
+                    <img src="images/github.svg" alt="github">
+                </a>
+            </li>
+            
+            <!-- <li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li> -->
+        </ul>
+        <p class="notice">This site is a work in progress.</p>
+        <hr>
+        <p>full sources <a href="credits.html">here</a></p>
+        <p class="copyright">&copy;Miriam Lam 2020 | miriamslam@gmail.com</p>
+    </footer>
+
+    <script>// When the user scrolls the page, execute toggle_sticky
+        window.onscroll = function() {
+          sticky_toggle();
+        };
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        function sticky_toggle() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
+    
+    <script>
+        var chevron = document.getElementById('menu');
+        var nav = document.getElementById('nav');
+
+        chevron.addEventListener('click', function(e) {
+            $("#arrow").toggleClass('flip');
+            nav.classList.toggle('hide-mobile');
+            e.preventDefault();
+        });
+
+    </script>
+
+
+</body>
+</html>
