@@ -244,6 +244,7 @@ footer .copyright {
     padding: 1em;
     color: color(accent);
     font-size: smaller;
+    margin-top: 2em;
 }
 // about stuff ----------------
 
@@ -346,6 +347,13 @@ h3 {
     }
 }
 
+@media only screen and (min-width: 550px){
+    SquareGrid{
+        --columns: 2;
+    }
+}
+
+// desktop
 @media only screen and (min-width: 700px){
     footer .section{
         display: flex;
@@ -370,7 +378,8 @@ h3 {
         font-size: 20px;
     }
     h1{font-size: 29px;}
-    h2{font-size: 20px;}
+    h2{font-size: 20px;
+        padding-bottom: 0.5em;}
     .project{
         img{
             width: 50vw;
@@ -390,8 +399,12 @@ h3 {
             top: 0;
             padding: 1em 1em;
         }
+    }
+    #footer-nav{
+        display: list-item;
+    }
 
-}}
+}
 
 @media only screen and (min-width: 950px){
     SquareGrid{

@@ -284,6 +284,7 @@ footer .copyright {
   padding: 1em;
   color: gray;
   font-size: smaller;
+  margin-top: 2em;
 }
 
 .about {
@@ -395,6 +396,12 @@ h3 {
           justify-content: space-evenly;
 }
 
+@media only screen and (min-width: 550px) {
+  SquareGrid {
+    --columns: 2;
+  }
+}
+
 @media only screen and (min-width: 700px) {
   footer .section {
     display: -webkit-box;
@@ -426,6 +433,7 @@ h3 {
   }
   h2 {
     font-size: 20px;
+    padding-bottom: 0.5em;
   }
   .project img {
     width: 50vw;
@@ -443,6 +451,9 @@ h3 {
   #navbar ul li {
     top: 0;
     padding: 1em 1em;
+  }
+  #footer-nav {
+    display: list-item;
   }
 }
 
