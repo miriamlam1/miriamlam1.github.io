@@ -1,80 +1,4 @@
-// ALERT: NOT VERY PERFORMANT
-// this could all be done statically and not everytime site opens. keeping this just incase
-
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var myObj = JSON.parse(this.responseText);
-    var html = editHTML(myObj.children);
-    document.getElementById("demo").innerHTML = html;
-  }
-};
-xmlhttp.open("GET", "lhea_images/lhea.json", true);
-xmlhttp.send();
-
-// func
-
-function editHTML(object){
-    var html = "";
-    var i;
-
-    for(i=0;i<object.length;i++){
-        var hashtag = object[i].name.split("_")[0];
-        var title =  object[i].name.split("_")[1];
-        // images in main folder
-        if (object[i].name.includes("cover") && object[i].type == "image"){
-            html += imageHTML(object[i],"",hashtag,title);
-            make_project_file(object[i],"", title);
-        }
-
-        // images in a directory
-        else if(object[i].type == "directory"){
-            var j;
-            //make_project_file(object[i], object[i].name, title);
-            for(j=0;j<object[i].children.length;j++){
-                // look for type cover first then first _cover_ in list
-                if (object[i].children[j].type == "cover"){
-                    
-                    html += imageHTML(object[i].children[j], object[i].name, hashtag, title);
-                    break; //dont display multiple of same folder
-                }
-            }
-            //if no cover types found then default to first in list
-            if (j==object[i].children.length){ 
-                for(j=0;j<object[i].children.length;j++){
-                    if (object[i].children[j].name.includes("cover")){
-                        html += imageHTML(object[i].children[j], object[i].name, hashtag, title);
-                        break;
-                    }
-                }
-            }
-        }
-    }
-    //console.log(html);
-    return html;
-}
-
-
-function imageHTML(object, dir, type, title){
-    var location = dir + "/"+ object.name;
-
-    //caveat because i used interface and interface design interchangably
-    if (type.includes("interface")){
-        var aclass = "interface-design";
-    } else {
-        var aclass = type;
-    }
-    
-    //html to inject for 1 project
-    var html = '<div class="item '+ aclass +'"><img src="lhea_images/'+ location +'">';
-    html += '<div class="overlay"><p><a href="/projects/'+ title +'.html">';
-    html += title + '</a> <br> #'+ type +'</p></div></div>';
-    return html;
-}
-
-function make_project_file(object, dir, title){
-    var location = dir + "/"+ object.name;
-    var html = `<!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
     <!-- head -->
     <head>
@@ -126,28 +50,8 @@ function make_project_file(object, dir, title){
         </header>
         <!-- main -->
     
-        <div class="project">`;
-        // no dir means main folder
-            if (dir == ""){
-                location = location.replace("_cover_","");
-                console.log(location);
-                html+= '<img src="../lhea_images/'+location+'" alt="'+title+'">';
-            }
-        // in a directory, display all children
-            else{
-                var i;
-                for(i=0;i<object.children.length;i++){
-                    if (object.children[i].type == "image" && !(object.children[i].name.includes("cover"))){
-                        location = dir+'/'+object.children[i].name;
-                        html+= '<img src="../lhea_images/'+location+'" alt="'+location+'">';
-                    }
-                }
-            }
-            // <img src="images/test.PNG" alt="img">
-            html+= `<div class = "bottomtext">
-                    <figcaption>`;
-            html+='description'; //description
-            html+= `</figcaption></div>
+        <div class="project"><img src="../lhea_images/branding_UEL/branding_UEL-01.jpg" alt="branding_UEL/branding_UEL-01.jpg"><img src="../lhea_images/branding_UEL/branding_UEL-02.jpg" alt="branding_UEL/branding_UEL-02.jpg"><img src="../lhea_images/branding_UEL/branding_UEL-03.jpg" alt="branding_UEL/branding_UEL-03.jpg"><img src="../lhea_images/branding_UEL/branding_UEL-04.jpg" alt="branding_UEL/branding_UEL-04.jpg"><img src="../lhea_images/branding_UEL/branding_UEL-05.jpg" alt="branding_UEL/branding_UEL-05.jpg"><img src="../lhea_images/branding_UEL/branding_UEL-06.jpg" alt="branding_UEL/branding_UEL-06.jpg"><img src="../lhea_images/branding_UEL/branding_UEL-07.jpg" alt="branding_UEL/branding_UEL-07.jpg"><img src="../lhea_images/branding_UEL/branding_UEL-08.jpg" alt="branding_UEL/branding_UEL-08.jpg"><img src="../lhea_images/branding_UEL/branding_UEL-09.jpg" alt="branding_UEL/branding_UEL-09.jpg"><img src="../lhea_images/branding_UEL/branding_UEL-10.jpg" alt="branding_UEL/branding_UEL-10.jpg"><img src="../lhea_images/branding_UEL/branding_UEL-11.jpg" alt="branding_UEL/branding_UEL-11.jpg"><img src="../lhea_images/branding_UEL/branding_UEL-12.jpg" alt="branding_UEL/branding_UEL-12.jpg"><img src="../lhea_images/branding_UEL/branding_UEL-13.jpg" alt="branding_UEL/branding_UEL-13.jpg"><img src="../lhea_images/branding_UEL/branding_UEL-14.jpg" alt="branding_UEL/branding_UEL-14.jpg"><img src="../lhea_images/branding_UEL/branding_UEL-15.jpg" alt="branding_UEL/branding_UEL-15.jpg"><img src="../lhea_images/branding_UEL/branding_UEL-16.jpg" alt="branding_UEL/branding_UEL-16.jpg"><img src="../lhea_images/branding_UEL/branding_UEL-17.jpg" alt="branding_UEL/branding_UEL-17.jpg"><img src="../lhea_images/branding_UEL/branding_UEL-18.jpg" alt="branding_UEL/branding_UEL-18.jpg"><div class = "bottomtext">
+                    <figcaption>description</figcaption></div>
             <nav>
                 <ul>
                     <li><a href="">&lt; Previous</a></li>
@@ -198,8 +102,4 @@ function make_project_file(object, dir, title){
     </footer>
     <script src="scripts/mobile.js"></script>
     </body>
-    </html>`;
-    //downloading it
-    var blob = new Blob([html], {type: "text/plain;charset=utf-8"});
-    //saveAs(blob, title+".html");
-}
+    </html>

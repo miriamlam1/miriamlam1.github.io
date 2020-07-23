@@ -44,5 +44,11 @@ def path_to_dict(path):
         else:
             new_json['type'] = "file"
     return new_json
-#path_to_dict('.')
-print(json.dumps(path_to_dict('.')))
+
+#print(json.dumps(path_to_dict('.')))
+
+pages = []
+
+def make_html_pages(){
+    
+}
