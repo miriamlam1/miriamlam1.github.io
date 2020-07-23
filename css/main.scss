@@ -127,9 +127,9 @@ address{font-style: normal;}
         justify-content: space-evenly;
         max-width: 1000px;
         margin: auto;
-        a:hover {
-            background-color: pink;
-            color: color(darker);
+        li:hover{
+            text-decoration: underline;
+            cursor: pointer;
         }
     }
 }

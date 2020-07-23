@@ -1,18 +1,20 @@
 // bring up nav script
-
 $(document).ready(function() {
     console.log( "ready!" );
 });
 
+//the array of topics to filter by
 var sorting_array = ['everything','interface-design','branding','typography','other'];
+
+//defaults to show everything
 var clicked = 'everything';
-filtering(clicked);
 
 function filtering_help(element, toDisplay){
     var elems= document.getElementsByClassName(element);
     for (var j=0;j<elems.length;j++){
         elems[j].style.display = toDisplay;
     }
+    //underlining current selected topic
     if (clicked == 'everything'){
         document.getElementById(element).style.textDecoration = 'none';
         document.getElementById(clicked).style.textDecoration = 'underline';
@@ -25,6 +27,17 @@ function filtering_help(element, toDisplay){
     }
 }
 
+//underlines on hover
+function hovercheck(topic){
+    $('#'+topic).mouseenter(function (){
+        document.getElementById(topic).style.textDecoration = 'underline';
+    });
+    $('#'+topic).mouseleave(function (){
+        document.getElementById(topic).style.textDecoration = 'none';
+    });
+}
+
+//filter
 function filtering(clicked){
     var i;
     for (i=0; i<sorting_array.length; i++){
@@ -40,27 +53,21 @@ function filtering(clicked){
     }
 }
 
-$('#everything').click(function (){
-    clicked='everything';
-    filtering(clicked);
-});
+//checks which button clicked and runs filter
+function filteronclick(topic){
+    $('#'+topic).click(function (){
+        clicked = topic;
+        filtering(topic);
+    });
+    return topic;
+}
 
-$('#interface-design').click(function (){
-    clicked='interface-design';
-    filtering(clicked);
-});
-
-$('#branding').click(function (){
-    clicked='branding';
-    filtering(clicked);
-});
-
-$('#typography').click(function (){
-    clicked='typography';
-    filtering(clicked);
-});
-
-$('#other').click(function (){
-    clicked='other';
-    filtering(clicked);
-});
+//main stuff
+filtering(clicked);
+var i;
+for(i=0;i<sorting_array.length;i++){
+    clicked = filteronclick(sorting_array[i]);
+    if (sorting_array[i]!=clicked){
+        hovercheck(sorting_array[i]);
+    }
+}

@@ -157,8 +157,9 @@ address {
   margin: auto;
 }
 
-#sortbar ul a:hover {
-  background-color: pink;
+#sortbar ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 nav li:hover {
