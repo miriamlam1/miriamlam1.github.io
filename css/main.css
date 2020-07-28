@@ -397,6 +397,10 @@ h3 {
           justify-content: space-evenly;
 }
 
+.next .previous {
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 550px) {
   SquareGrid {
     --columns: 2;
